@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,25 +29,50 @@ namespace homework
                     break;
                 }
             }
-            Console.WriteLine("Введите номера разрядов для обмена (например, 1 и 6):");
-            string[] positions;
-            while (true)
-            {
-                positions = UsenInput.GetStringFromUser().Split(' ');
-                if (positions.Length == 2)
-                {
-                    break;
-                }
-                Console.WriteLine("Ошибка: введите два корректных номера разрядов.");
-            }
-            int pos1 = int.Parse(positions[0]) - 1; // Преобразуем в нулевой индекс
-            
+            Console.WriteLine("Введите позицию числа которую хотите обменять (например, 1 и 6): ");
+            int pos1 = GetPosition();
+            Console.WriteLine("Введите позицию числа на которую хотите обменять(от 1 до 6): ");
+            int pos2 = GetPosition();
 
+            SwapDigits(ref input, pos1, pos2);
+            Console.WriteLine($"Результат: {input}");
 
         }
 
 
+        public static int GetPosition()
+        {
 
+            while (true) { 
+            int pos = UsenInput.GetIntFromUser();
+            if (IsValidPos(pos))
+            {
+                return pos;
+            }}}
+
+        
+        public static void SwapDigits(ref string number, int pos1, int pos2)
+        {
+            char[] digits = number.ToCharArray();
+            char temp = digits[pos1 - 1]; // -1 для перехода к индексу массива
+            digits[pos1 - 1] = digits[pos2 - 1];
+            digits[pos2 - 1] = temp;
+            number = new string(digits);
+
+        }
+
+
+        private static bool IsValidPos(int pos)
+        {
+            if (pos < 1 || pos > 6)
+            {
+                Console.WriteLine("Ошибка: номера разрядов должны быть от 1 до 6.");
+                return false;
+            }
+            
+
+            return true;
+        }
         private static bool IsValidInput(string input)
         {
             if (input.Length !=6)

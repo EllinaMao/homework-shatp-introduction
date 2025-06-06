@@ -24,6 +24,7 @@
             Task1.Result();
             Task2.Result();
             Task3.Result();
+            Task4.Result();
 
         }
     }
