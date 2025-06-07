@@ -15,7 +15,7 @@ using System.Threading.Tasks;
  */
 namespace homework
 {
-    internal static class Task1
+    internal static class FizzBuzz
     {
         public static void Result()
         {

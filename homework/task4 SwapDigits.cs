@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace homework
 {
-    internal static class Task4
+    internal static class SwapDigitsClass
     {/*
       Задание 4
 Пользователь вводит шестизначное число. После чего

@@ -14,7 +14,7 @@ namespace homework
 ввел 20 и 11, требуется нормализация, после которой
 начало диапазона станет равно 11, а конец 20.
 */
-    internal class Task7
+    internal class ShowNumbersBetween
     {
         public static void Result()
         {

@@ -15,7 +15,7 @@ namespace homework
 Результат: 9.
 
      */
-    internal static class Task2
+    internal static class PercentOfNumber
     {
         public static void Result()
         {
@@ -23,7 +23,7 @@ namespace homework
             double value = UsenInput.GetDoubleFromUser();
             Console.WriteLine("Введите второе число (процент):");
             double percentage = UsenInput.GetDoubleFromUser();
-            double result = (int)(value * (percentage / 100));
+            double result = (value * (percentage / 100));
 
             Console.WriteLine($"{percentage}% от {value} равно {result}");//интерполяция строк
 

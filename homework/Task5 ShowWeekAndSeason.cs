@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace homework
 {
-    internal static class Task5
+    internal static class ShowWeekAndSeason
     {
         /* Задание 5
         Пользователь вводит с клавиатуры дату. Приложение должно отобразить название сезона и дня недели.

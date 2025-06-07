@@ -12,7 +12,7 @@ using System.Threading.Tasks;
  */
 namespace homework
 {
-    internal static class Task3
+    internal static class ConnectFourNumbers
     {
         public static void Result()
         {

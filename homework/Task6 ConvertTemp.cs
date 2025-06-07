@@ -10,7 +10,7 @@ namespace homework
 или наоборот.
 
   */
-    internal class Task6
+    internal class ConvertTemp
     {
         static public void Result()
         {
