@@ -29,14 +29,25 @@ namespace homework
                     break;
                 }
             }
-            Console.WriteLine("Введите позицию числа которую хотите обменять (например, 1 и 6): ");
-            int pos1 = GetPosition();
-            Console.WriteLine("Введите позицию числа на которую хотите обменять(от 1 до 6): ");
-            int pos2 = GetPosition();
+
+            int pos1, pos2;
+            while (true)
+            {
+                Console.WriteLine("Введите первую позицию для обмена (от 1 до 6):");
+                pos1 = GetPosition();
+
+                Console.WriteLine("Введите вторую позицию для обмена (от 1 до 6, не совпадающую с первой):");
+                pos2 = GetPosition();
+
+                if (pos1 != pos2)
+                {
+                    break;
+                }
+                Console.WriteLine("Позиции не могут быть одинаковыми. Пожалуйста, введите разные позиции.");
+            }
 
             SwapDigits(ref input, pos1, pos2);
             Console.WriteLine($"Результат: {input}");
-
         }
 
 
